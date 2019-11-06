@@ -5,6 +5,7 @@ class CreatePhoneCalls < ActiveRecord::Migration[6.0]
       t.string :caller
       t.time :start_at
       t.time :end_at
+      t.integer :call_price
 
       t.timestamps
     end
