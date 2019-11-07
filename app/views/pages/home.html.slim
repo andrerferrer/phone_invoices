@@ -1,12 +1,18 @@
-h1 Phone Invoices
+h1 Chamadas Telefônicas
 
-form method="post" 
-	label for="test" Test 
+form method="get" action="/"
+	label for="phone_number" <b>número telêfonico</b> cadastrado 
 	br
-	input type="text" name="test" id="test"
-
-	label for="test" Test
+	input type="text" name="phone_number" id="phone_number" autofocus="true"
 	br
-	input type="text" name="test" id="test"
+	label for="period_start" início do período para cálculo da fatura - <b>mês / ano</b>
+	br
+	input type="text" name="period_start" id="period_start"
+	br
+	label for="period_end" fim do período para cálculo da fatura - <b>mês / ano</b>
+	br
+	input type="text" name="period_end" id="period_end"
+	br
+	input type="submit"
 
 
