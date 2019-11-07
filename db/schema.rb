@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2019_10_30_212157) do
   create_table "phone_calls", force: :cascade do |t|
     t.string "called"
     t.string "caller"
-    t.time "start_at"
-    t.time "end_at"
-    t.integer "call_price"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.integer "call_price_cents"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
