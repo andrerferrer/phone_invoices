@@ -1,25 +1,32 @@
 h1 Prices
 
-ul
-    li Caller || Called || Start_at || End_at || Price in BRL
+table
+    tr
+        th Caller 
+        th Called 
+        th Start_at 
+        th End_at 
+        th Price in BRL
     - @phone_calls.each do |phone_call|
-        li = "#{phone_call.caller} || #{phone_call.called} || #{phone_call.start_at.strftime('%H:%M')} || #{phone_call.end_at.strftime('%H:%M')} || R$#{phone_call.call_price_cents.fdiv(100).round(2)} "
+        tr 
+            td = phone_call.caller
+            td = phone_call.called
+            td = phone_call.start_at.strftime('%H:%M')
+            td = phone_call.end_at.strftime('%H:%M')
+            td 
+                | R$#{phone_call.call_price_cents.fdiv(100).round(2)}
+
 p 
     | Total: R$#{@total_price}
 
 h2 debugging
-
-p phone_number
-= params[:phone_number]
-
-p period_start
-= params[:period_start]
-
-p period_end
-= params[:period_end]
-
-p start_at
-= @start_at
-
-p end_at
-= @end_at
+p 
+    | phone_number = #{params[:phone_number]}
+p 
+    | period_start = #{params[:period_start]}
+p 
+    | period_end = #{params[:period_end]}
+p 
+    | start_at = #{@start_at}
+p 
+    | end_at = #{@end_at}
